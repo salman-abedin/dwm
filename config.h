@@ -14,7 +14,6 @@ static const int sidepad = 250; /* horizontal padding of bar */
 static const char *fonts[] = {
     "sans:size=17",
     "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true",
-
 };
 
 static const char dmenufont[] = "sans-serif:size=10";
