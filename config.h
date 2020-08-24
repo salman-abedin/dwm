@@ -1,12 +1,12 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx = 1; /* border pixel of windows */
-static const unsigned int snap = 32;    /* snap pixel */
-static const int showbar = 1;           /* 0 means no bar */
-static const int topbar = 1;            /* 0 means bottom bar */
+static const unsigned int borderpx = 5; /* border pixel of windows */
 
-/* static const char *fonts[] = {"monospace:size=12"}; */
+static const unsigned int snap = 32; /* snap pixel */
+
+static const int showbar = 1; /* 0 means no bar */
+static const int topbar = 1;  /* 0 means bottom bar */
 
 static const char *fonts[] = {
     "monospace:size=15",
@@ -26,8 +26,8 @@ static const char norm_bg[] = "#000000";
 static const char norm_border[] = "#ffffff";
 
 static const char sel_fg[] = "#ffffff";
-static const char sel_bg[] = "#555555";
-static const char sel_border[] = "#555555";
+static const char sel_bg[] = "#000000";
+static const char sel_border[] = "#0000ff";
 
 static const char urg_fg[] = "#e5e9eb";
 static const char urg_bg[] = "#269886";
@@ -101,7 +101,6 @@ static const char *termcmd[] = {"st", NULL};
 
 /* #include <X11/XF86keysym.h> */
 #include "patches/nextprevtag.c"
-#include "patches/shiftview.c"
 static Key keys[] = {
     /* modifier                     key        function        argument */
 
