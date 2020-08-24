@@ -55,15 +55,15 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
      */
     /* class      instance    title       tags mask     isfloating   monitor */
-    {"Gimp", NULL, NULL, 0, 1, -1},
-    {"firefox", NULL, NULL, 2, 1, -1},
+    /* {"Gimp", NULL, NULL, 0, 1, -1}, */
+    {"firefox", 0, 0, 2, 0, -1},
 };
 
 /* layout(s) */
 static const float mfact = 0.60; /* factor of master area size [0.05..0.95] */
 static const int nmaster = 1;    /* number of clients in master area */
 static const int resizehints =
-    1; /* 1 means respect size hints in tiled resizals */
+    0; /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
