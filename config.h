@@ -12,12 +12,12 @@ static const int vertpad = 10;  /* vertical padding of bar */
 static const int sidepad = 250; /* horizontal padding of bar */
 
 static const char *fonts[] = {
-    "monospace:size=15",
-    "Noto Color Emoji:pixelsize=15:antialias=true:autohint=true",
+    "sans:size=17",
+    "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true",
 
 };
 
-static const char dmenufont[] = "monospace:size=15";
+static const char dmenufont[] = "sans-serif:size=10";
 
 //==============================================================================
 //                             Colors
@@ -67,7 +67,7 @@ static const int resizehints =
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    {"| 🗃" |, tile}, /* first entry is default */
+    {"| 🗃 |", tile}, /* first entry is default */
     {"| 🎸 |", monocle},
     {"><>", NULL}, /* no layout function means floating behavior */
 };
