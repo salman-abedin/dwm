@@ -113,22 +113,18 @@ static Key keys[] = {
     //              WM stuff
     //--------------------------------------
 
-    /* {MODKEY, XK_l, focusstack, {.i = +1}}, */
-    /* {MODKEY, XK_k, focusstack, {.i = -1}}, */
-
-    /* {MODKEY, XK_l, pushdown, {0}}, */
-    /* {MODKEY, XK_k, pushup, {0}}, */
-
     {MODKEY, XK_semicolon, view_adjacent, {.i = +1}},
     {MODKEY, XK_j, view_adjacent, {.i = -1}},
 
-    {MODKEY, XK_k, movestack, {.i = -1}},
-    {MODKEY, XK_l, movestack, {.i = +1}},
+    {MODKEY, XK_l, focusstack, {.i = +1}},
+    {MODKEY, XK_k, focusstack, {.i = -1}},
+    {MODKEY | ShiftMask, XK_l, movestack, {.i = +1}},
+    {MODKEY | ShiftMask, XK_k, movestack, {.i = -1}},
 
     {MODKEY, XK_n, killclient, {0}},
     {MODKEY, XK_m, setlayout, {0}},
 
-    {MODKEY | ShiftMask, XK_f, togglefullscr, {0}},
+    {MODKEY, XK_f, togglefullscr, {0}},
 
     {MODKEY, XK_Tab, view, {0}},
 
@@ -161,9 +157,6 @@ static Key keys[] = {
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
 
-    {MODKEY, XK_f, spawn,
-     SHCMD("xdotool keyup f key --clearmodifiers Super+Shift+f")},
-
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
     {0, XK_F2, spawn, SHCMD("setplayer --vol down")},
     {0, XK_F3, spawn, SHCMD("setplayer --vol up")},
@@ -178,6 +171,9 @@ static Key keys[] = {
     {0, XK_KP_Delete, spawn, SHCMD("pkill -u $USER")},
     {0, XK_KP_Insert, spawn, SHCMD("sleep 1 && xset dpms force off")},
     {0, XK_KP_Add, spawn, SHCMD("systectl suspend")},
+
+    /* {MODKEY, XK_l, spawn, */
+    /*  SHCMD("xdotool key Super+period && xdotool key Super+Shift+comma")}, */
 
     //--------------------------------------
     //              Tags
