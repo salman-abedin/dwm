@@ -103,7 +103,7 @@ static const char *termcmd[] = {"st", NULL};
        {MODKEY | ShiftMask, KEY, tag, {.ui = 1 << TAG}},          \
        {MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
 
-/* #include <X11/XF86keysym.h> */
+#include "patches/movestack.c"
 #include "patches/nextprevtag.c"
 static Key keys[] = {
     /* modifier                     key        function        argument */
@@ -112,14 +112,17 @@ static Key keys[] = {
     //              WM stuff
     //--------------------------------------
 
-    {MODKEY, XK_l, focusstack, {.i = +1}},
-    {MODKEY, XK_k, focusstack, {.i = -1}},
+    /* {MODKEY, XK_l, focusstack, {.i = +1}}, */
+    /* {MODKEY, XK_k, focusstack, {.i = -1}}, */
 
-    /* {MODKEY, XK_j, shiftview, {.i = -1}}, */
-    /* {MODKEY, XK_semicolon, shiftview, {.i = +1}}, */
+    /* {MODKEY, XK_l, pushdown, {0}}, */
+    /* {MODKEY, XK_k, pushup, {0}}, */
 
     {MODKEY, XK_semicolon, view_adjacent, {.i = +1}},
     {MODKEY, XK_j, view_adjacent, {.i = -1}},
+
+    {MODKEY, XK_k, movestack, {.i = -1}},
+    {MODKEY, XK_l, movestack, {.i = +1}},
 
     {MODKEY, XK_n, killclient, {0}},
     {MODKEY, XK_m, setlayout, {0}},
