@@ -137,7 +137,7 @@ static Key keys[] = {
     /* {MODKEY, XK_m, setlayout, {.v = &layouts[2]}}, */
     /* {MODKEY | ShiftMask, XK_space, togglefloating, {0}}, */
 
-    /* {MODKEY, XK_q, quit, {0}}, */
+    {MODKEY, XK_q, quit, {0}},
 
     //--------------------------------------
     //              Commands
