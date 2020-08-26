@@ -103,6 +103,7 @@ static const char *termcmd[] = {"st", NULL};
        {MODKEY | ShiftMask, KEY, tag, {.ui = 1 << TAG}},          \
        {MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
 
+#include "patches/actualfullscreen.c"
 #include "patches/movestack.c"
 #include "patches/nextprevtag.c"
 static Key keys[] = {
@@ -127,7 +128,7 @@ static Key keys[] = {
     {MODKEY, XK_n, killclient, {0}},
     {MODKEY, XK_m, setlayout, {0}},
 
-    {MODKEY, XK_f, togglefullscr, {0}},
+    {MODKEY | ShiftMask, XK_f, togglefullscr, {0}},
 
     {MODKEY, XK_Tab, view, {0}},
 
@@ -159,6 +160,9 @@ static Key keys[] = {
     {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
+
+    {MODKEY, XK_f, spawn,
+     SHCMD("xdotool keyup f key --clearmodifiers Super+Shift+f")},
 
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
     {0, XK_F2, spawn, SHCMD("setplayer --vol down")},
