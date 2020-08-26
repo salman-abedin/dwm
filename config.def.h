@@ -123,13 +123,15 @@ static Key keys[] = {
     {MODKEY, XK_n, killclient, {0}},
     {MODKEY, XK_m, setlayout, {0}},
 
+    {MODKEY, XK_f, togglefullscr, {0}},
+
     {MODKEY, XK_Tab, view, {0}},
 
     /* Resize */
     {MODKEY | Mod1Mask, XK_j, setmfact, {.f = -0.05}},
     {MODKEY | Mod1Mask, XK_semicolon, setmfact, {.f = +0.05}},
 
-    /* {MODKEY | ShiftMask, XK_b, togglebar, {0}}, */
+    {MODKEY, XK_s, togglebar, {0}},
 
     /* {MODKEY, XK_Return, zoom, {0}}, */
 
