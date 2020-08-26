@@ -104,8 +104,7 @@ static const char *termcmd[] = {"st", NULL};
        {MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
 
 #include "patches/actualfullscreen.c"
-#include "patches/focusmaster.c"
-#include "patches/movestack.c"
+#include "patches/inplacerotate.c"
 #include "patches/nextprevtag.c"
 static Key keys[] = {
     /* modifier                     key        function        argument */
@@ -120,35 +119,24 @@ static Key keys[] = {
     {MODKEY, XK_n, killclient, {0}},
     {MODKEY, XK_m, setlayout, {0}},
 
-    {MODKEY, XK_f, togglefullscr, {0}},
-
-    {MODKEY, XK_Tab, view, {0}},
+    {MODKEY, XK_l, inplacerotate, {.i = +2}},
+    {MODKEY, XK_k, inplacerotate, {.i = -2}},
 
     {MODKEY, XK_period, focusstack, {.i = +1}},
     {MODKEY, XK_comma, focusstack, {.i = -1}},
-    {MODKEY | ShiftMask, XK_m, focusmaster, {0}},
-    {MODKEY | ShiftMask, XK_period, movestack, {.i = +1}},
-    {MODKEY | ShiftMask, XK_comma, movestack, {.i = -1}},
 
-    {MODKEY, XK_l, spawn,
-     SHCMD("xdotool key Super+shift+period && xdotool key Super+Shift+m")},
-    {MODKEY, XK_k, spawn,
-     SHCMD("xdotool key Super+shift+comma && xdotool key Super+Shift+m")},
+    {MODKEY, XK_s, togglebar, {0}},
+    {MODKEY, XK_f, togglefullscr, {0}},
+    {MODKEY, XK_Tab, view, {0}},
+    {MODKEY, XK_q, quit, {0}},
 
     /* Resize */
     {MODKEY | Mod1Mask, XK_j, setmfact, {.f = -0.05}},
     {MODKEY | Mod1Mask, XK_semicolon, setmfact, {.f = +0.05}},
 
-    {MODKEY, XK_s, togglebar, {0}},
-
     /* {MODKEY, XK_Return, zoom, {0}}, */
-
-    /* {MODKEY, XK_t, setlayout, {.v = &layouts[0]}}, */
-    /* {MODKEY, XK_f, setlayout, {.v = &layouts[1]}}, */
     /* {MODKEY, XK_m, setlayout, {.v = &layouts[2]}}, */
     /* {MODKEY | ShiftMask, XK_space, togglefloating, {0}}, */
-
-    {MODKEY, XK_q, quit, {0}},
 
     //--------------------------------------
     //              Commands
@@ -178,6 +166,9 @@ static Key keys[] = {
     {0, XK_KP_Delete, spawn, SHCMD("pkill -u $USER")},
     {0, XK_KP_Insert, spawn, SHCMD("sleep 1 && xset dpms force off")},
     {0, XK_KP_Add, spawn, SHCMD("systectl suspend")},
+
+    /* {MODKEY, XK_k, spawn, */
+    /*  SHCMD("xdotool key Super+shift+comma && xdotool key Super+Shift+m")}, */
 
     //--------------------------------------
     //              Tags
