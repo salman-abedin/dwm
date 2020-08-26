@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx = 2; /* border pixel of windows */
-static const unsigned int gappx = 15;   /* gap pixel between windows */
+static const unsigned int borderpx = 0; /* border pixel of windows */
+static const unsigned int gappx = 25;   /* gap pixel between windows */
 
 static const unsigned int snap = 32; /* snap pixel */
 
@@ -57,6 +57,8 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     isfloating   monitor */
     /* {"Gimp", NULL, NULL, 0, 1, -1}, */
     {"firefox", 0, 0, 2, 0, -1},
+    {"spotify", 0, 0, 3, 0, -1},
+
 };
 
 /* layout(s) */
