@@ -105,8 +105,7 @@ static const char *termcmd[] = {"st", NULL};
 
 #include "patches/actualfullscreen.c"
 #include "patches/inplacerotate.c"
-#include "patches/nextprevtag.c"
-#include "patches/shiftview.c"
+#include "patches/shiftviewactive.c"
 static Key keys[] = {
     /* modifier                     key        function        argument */
 
@@ -117,8 +116,8 @@ static Key keys[] = {
     /* {MODKEY, XK_semicolon, view_adjacent, {.i = +1}}, */
     /* {MODKEY, XK_j, view_adjacent, {.i = -1}}, */
 
-    {MODKEY, XK_semicolon, shiftview, {.i = +1}},
-    {MODKEY, XK_j, shiftview, {.i = -1}},
+    {MODKEY, XK_semicolon, shiftviewactive, {.i = +1}},
+    {MODKEY, XK_j, shiftviewactive, {.i = -1}},
 
     {MODKEY, XK_n, killclient, {0}},
     {MODKEY, XK_m, setlayout, {0}},
@@ -162,7 +161,12 @@ static Key keys[] = {
     {0, XK_F11, spawn, SHCMD("backlight --down")},
     {0, XK_F12, spawn, SHCMD("backlight --up")},
 
-    {0, XK_Print, spawn, SHCMD("screencast")},
+    /* {0, XK_Print, spawn, SHCMD("maim -u -d 1 ~/screenshot_"$(date
+       +'%Y-%d%b-%H%M%S')".png")}, */
+    /* {0 | ShiftMask, XK_Print, spawn, SHCMD("maim -B -u -d 1 -s
+       ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png")}, */
+
+    {MODKEY, XK_Print, spawn, SHCMD("screencast")},
 
     {0, XK_KP_Home, spawn, SHCMD("connectbt")},
     {0, XK_KP_End, spawn, SHCMD("pkill -u $USER")},

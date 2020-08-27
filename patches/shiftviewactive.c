@@ -2,8 +2,9 @@
  *
  * @param: "arg->i" stores the number of tags to shift right (positive value)
  *          or left (negative value)
+ * Stolen from Luke Smith
  */
-void shiftview(const Arg *arg) {
+void shiftviewactive(const Arg *arg) {
    Arg a;
    Client *c;
    unsigned visible = 0;
@@ -62,17 +63,3 @@ void shifttag(const Arg *arg) {
       tag(&a);
    }
 }
-
-/* /1* This one visits empty ones as well *1/ */
-/* void shiftview(const Arg *arg) { */
-/*    Arg shifted; */
-/*    if (arg->i > 0)  // left circular shift */
-/*       shifted.ui = (selmon->tagset[selmon->seltags] << arg->i) | */
-/*                    (selmon->tagset[selmon->seltags] >> (LENGTH(tags) -
- * arg->i)); */
-/*    else  // right circular shift */
-/*       shifted.ui = selmon->tagset[selmon->seltags] >> (-arg->i) | */
-/*                    selmon->tagset[selmon->seltags] << (LENGTH(tags) +
- * arg->i); */
-/*    view(&shifted); */
-/* } */
