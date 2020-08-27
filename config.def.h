@@ -106,6 +106,7 @@ static const char *termcmd[] = {"st", NULL};
 #include "patches/actualfullscreen.c"
 #include "patches/inplacerotate.c"
 #include "patches/nextprevtag.c"
+#include "patches/shiftview.c"
 static Key keys[] = {
     /* modifier                     key        function        argument */
 
@@ -113,8 +114,11 @@ static Key keys[] = {
     //              WM stuff
     //--------------------------------------
 
-    {MODKEY, XK_semicolon, view_adjacent, {.i = +1}},
-    {MODKEY, XK_j, view_adjacent, {.i = -1}},
+    /* {MODKEY, XK_semicolon, view_adjacent, {.i = +1}}, */
+    /* {MODKEY, XK_j, view_adjacent, {.i = -1}}, */
+
+    {MODKEY, XK_semicolon, shiftview, {.i = +1}},
+    {MODKEY, XK_j, shiftview, {.i = -1}},
 
     {MODKEY, XK_n, killclient, {0}},
     {MODKEY, XK_m, setlayout, {0}},
