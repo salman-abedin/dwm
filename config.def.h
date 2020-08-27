@@ -1,4 +1,10 @@
-/* See LICENSE file for copyright and license details. */
+/* ____   __        __  __  __      ____                    __   _ */
+/* |  _ \  \ \      / / |  \/  |    / ___|   ___    _ __    / _| (_)   __ _ */
+/* | | | |  \ \ /\ / /  | |\/| |   | |      / _ \  | '_ \  | |_  | |  / _` | */
+/* | |_| |   \ V  V /   | |  | |   | |___  | (_) | | | | | |  _| | | | (_| | */
+/* |____/     \_/\_/    |_|  |_|    \____|  \___/  |_| |_| |_|   |_|  \__, | */
+/*                                                                   |___/ */
+/* /1* See LICENSE file for copyright and license details. *1/ */
 
 /* appearance */
 static const unsigned int borderpx = 0; /* border pixel of windows */
@@ -103,6 +109,8 @@ static const char *termcmd[] = {"st", NULL};
        {MODKEY | ShiftMask, KEY, tag, {.ui = 1 << TAG}},          \
        {MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
 
+#include <X11/XF86keysym.h>
+
 #include "patches/actualfullscreen.c"
 #include "patches/inplacerotate.c"
 #include "patches/shiftviewactive.c"
@@ -177,6 +185,9 @@ static Key keys[] = {
 
     /* {MODKEY, XK_k, spawn, */
     /*  SHCMD("xdotool key Super+shift+comma && xdotool key Super+Shift+m")}, */
+
+    {0, XF86XK_AudioPrev, spawn, SHCMD("setplayer --play prev")},
+    {0, XF86XK_AudioNext, spawn, SHCMD("setplayer --play next")},
 
     //--------------------------------------
     //              Tags
