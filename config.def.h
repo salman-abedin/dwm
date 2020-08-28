@@ -189,6 +189,7 @@ static Key keys[] = {
 
     {0, XF86XK_AudioPrev, spawn, SHCMD("setplayer --play prev")},
     {0, XF86XK_AudioNext, spawn, SHCMD("setplayer --play next")},
+    {0, XF86XK_AudioPlay, spawn, SHCMD("setplayer --play toggle")},
 
     //--------------------------------------
     //              Tags
