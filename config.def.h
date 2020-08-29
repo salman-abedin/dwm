@@ -177,7 +177,8 @@ static Key keys[] = {
     /* {0 | ShiftMask, XK_Print, spawn, SHCMD("maim -B -u -d 1 -s
        ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png")}, */
 
-    {0, XK_KP_Home, spawn, SHCMD("connectbt")},
+    {0, XK_KP_Home, spawn, SHCMD("blue -c")},
+    {MODKEY, XK_KP_Home, spawn, SHCMD("blue -t")},
     {0, XK_KP_End, spawn, SHCMD("pkill -u $USER")},
     {0, XK_KP_Left, spawn, SHCMD("timer")},
     {0, XK_KP_Delete, spawn, SHCMD("pkill -u $USER")},
