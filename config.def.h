@@ -51,10 +51,12 @@ static const char *colors[][3] = {
 };
 
 static const char *tags[] = {
-    "",
-    "🕸",
-    "🎼",
+    "🕳",
+    "🕳",
+    "🕳",
 };
+
+static const char *alttags[] = {"🏡", "🏡", "🏡"};
 
 static const Rule rules[] = {
     /* xprop(1):
