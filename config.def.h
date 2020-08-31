@@ -4,6 +4,7 @@
 /* | |_| |   \ V  V /   | |  | |   | |___  | (_) | | | | | |  _| | | | (_| | */
 /* |____/     \_/\_/    |_|  |_|    \____|  \___/  |_| |_| |_|   |_|  \__, | */
 /*                                                                   |___/ */
+
 /* /1* See LICENSE file for copyright and license details. *1/ */
 
 /* appearance */
@@ -41,7 +42,7 @@ static const char norm_bg[] = "#000000";
 static const char norm_border[] = "#ffffff";
 
 static const char sel_fg[] = "#ffffff";
-static const char sel_bg[] = "#000000";
+static const char sel_bg[] = "#222222";
 static const char sel_border[] = "#0000ff";
 
 static const char *colors[][3] = {
@@ -56,7 +57,7 @@ static const char *tags[] = {
     "🕳",
 };
 
-static const char *alttags[] = {"🌴", "🌴", "🌴"};
+static const char *alttags[] = {"", "🕸", ""};
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -139,8 +140,8 @@ static Key keys[] = {
     {MODKEY, XK_period, focusstack, {.i = +1}},
     {MODKEY, XK_comma, focusstack, {.i = -1}},
 
-    {MODKEY, XK_s, togglebar, {0}},
-    {MODKEY, XK_f, togglefullscr, {0}},
+    {MODKEY | ShiftMask, XK_b, togglebar, {0}},
+    {MODKEY | ShiftMask, XK_f, togglefullscr, {0}},
     {MODKEY, XK_Tab, view, {0}},
     {MODKEY, XK_q, quit, {0}},
 
@@ -165,6 +166,7 @@ static Key keys[] = {
     {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
+    {MODKEY, XK_f, spawn, SHCMD("toggle -f")},
 
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
     {0, XK_F2, spawn, SHCMD("setplayer --vol down")},
