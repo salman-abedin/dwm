@@ -44,7 +44,6 @@ install: all
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	rm -f dwm ${OBJ} config.h
-	pkill dwm
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
