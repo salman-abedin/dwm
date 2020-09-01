@@ -21,11 +21,11 @@ static const int vertpad = 5;  /* vertical padding of bar */
 static const int sidepad = 390; /* horizontal padding of bar */
 
 static const char *fonts[] = {
-    "sans:size=15",
+    "sans-serif:size=15",
     "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true",
 };
 
-static const char dmenufont[] = "sans:size=15";
+static const char dmenufont[] = "sans-serif:size=15";
 
 //==============================================================================
 //                             Colors
