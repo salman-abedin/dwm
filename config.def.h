@@ -153,6 +153,9 @@ static Key keys[] = {
     /* {MODKEY, XK_m, setlayout, {.v = &layouts[2]}}, */
     /* {MODKEY | ShiftMask, XK_space, togglefloating, {0}}, */
 
+    /* Bring to master */
+    {MODKEY, XK_i, zoom, {0}},
+
     //--------------------------------------
     //              Commands
     //--------------------------------------
