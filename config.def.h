@@ -186,11 +186,14 @@ static Key keys[] = {
 
     {0, XK_KP_Home, spawn, SHCMD("blue -c")},
     {MODKEY, XK_KP_Home, spawn, SHCMD("blue -t")},
-    {0, XK_KP_End, spawn, SHCMD("pkill -u $USER")},
     {0, XK_KP_Left, spawn, SHCMD("timer")},
-    {0, XK_KP_Delete, spawn, SHCMD("pkill -u $USER")},
+    {0, XK_KP_End, spawn, SHCMD("pkill -u $USER")},
+
+    {0, XK_KP_Delete, spawn, SHCMD("lock")},
+
+    /* {0, XK_KP_Delete, spawn, SHCMD("pkill -u $USER")}, */
     {0, XK_KP_Insert, spawn, SHCMD("sleep 1 && xset dpms force off")},
-    {0, XK_KP_Add, spawn, SHCMD("systectl suspend")},
+    /* {0, XK_KP_Add, spawn, SHCMD("systectl suspend")}, */
 
     /* {MODKEY, XK_k, spawn, */
     /*  SHCMD("xdotool key Super+shift+comma && xdotool key Super+Shift+m")}, */
