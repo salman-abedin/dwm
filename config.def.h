@@ -163,7 +163,7 @@ static Key keys[] = {
     {MODKEY, XK_Return, spawn, SHCMD("launch -T")},
 
     {MODKEY, XK_b, spawn, SHCMD("$BROWSER")},
-    {MODKEY, XK_e, spawn, SHCMD("insertemoji")},
+    {MODKEY, XK_e, spawn, SHCMD("insert-emoji")},
     {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")},
     {MODKEY, XK_p, spawn, SHCMD("mirror --git")},
     {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
