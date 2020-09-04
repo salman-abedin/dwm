@@ -189,7 +189,7 @@ static Key keys[] = {
     {0, XK_KP_Left, spawn, SHCMD("timer")},
     {0, XK_KP_End, spawn, SHCMD("pkill -u $USER")},
 
-    {0, XK_KP_Delete, spawn, SHCMD("lock")},
+    {0, XK_KP_Delete, spawn, SHCMD("lock -f")},
 
     /* {0, XK_KP_Delete, spawn, SHCMD("pkill -u $USER")}, */
     {0, XK_KP_Insert, spawn, SHCMD("sleep 1 && xset dpms force off")},
