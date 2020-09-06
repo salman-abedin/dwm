@@ -174,8 +174,8 @@ static Key keys[] = {
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
     {0, XK_F2, spawn, SHCMD("setplayer --vol down")},
     {0, XK_F3, spawn, SHCMD("setplayer --vol up")},
-    {0, XK_F11, spawn, SHCMD("doas -- backlight --down")},
-    {0, XK_F12, spawn, SHCMD("doas -- backlight --up")},
+    {0, XK_F11, spawn, SHCMD("backlight --down")},
+    {0, XK_F12, spawn, SHCMD("backlight --up")},
 
     {0, XK_Print, spawn, SHCMD("record -d")},
     {MODKEY, XK_Print, spawn, SHCMD("record -s")},
