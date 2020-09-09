@@ -187,7 +187,9 @@ static Key keys[] = {
     {0, XK_KP_Home, spawn, SHCMD("blue -c")},
     {MODKEY, XK_KP_Home, spawn, SHCMD("blue -t")},
     {0, XK_KP_Left, spawn, SHCMD("timer")},
+
     {0, XK_KP_End, spawn, SHCMD("pkill -u $USER")},
+    {MODKEY, XK_KP_End, spawn, SHCMD("leavex -s")},
 
     {0, XK_KP_Delete, spawn, SHCMD("lock -f")},
 
