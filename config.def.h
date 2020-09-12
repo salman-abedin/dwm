@@ -67,6 +67,7 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     isfloating   monitor */
     {"st-256color", 0, 0, 1, 0, -1},
     {"firefox", 0, 0, 2, 0, -1},
+    {"Brave-browser", 0, 0, 2, 0, -1},
     {"mpv", 0, 0, 0, 1, -1},
 };
 
