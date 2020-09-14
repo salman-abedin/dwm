@@ -9,7 +9,7 @@
 
 /* appearance */
 static const unsigned int borderpx = 0; /* border pixel of windows */
-static const unsigned int gappx = 25;   /* gap pixel between windows */
+static const unsigned int gappx = 15;   /* gap pixel between windows */
 
 static const unsigned int snap = 32; /* snap pixel */
 
