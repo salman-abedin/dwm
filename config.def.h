@@ -173,6 +173,8 @@ static Key keys[] = {
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
     {MODKEY, XK_f, spawn, SHCMD("toggle -f")},
 
+    {MODKEY, XK_backslash, spawn, SHCMD("unimark")},
+
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
     {0, XK_F2, spawn, SHCMD("setplayer --vol down")},
     {0, XK_F3, spawn, SHCMD("setplayer --vol up")},
