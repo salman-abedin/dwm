@@ -57,7 +57,8 @@ static const char *tags[] = {
     "🕳",
 };
 
-static const char *alttags[] = {"", "🕸", ""};
+
+static const char *alttags[] = {"", "🕸", "🎵"};
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -68,10 +69,10 @@ static const Rule rules[] = {
     {"st-256color", 0, 0, 1, 0, -1},
     {"firefox", 0, 0, 1 << 1, 0, -1},
     {"Brave-browser", 0, 0, 1 << 1, 0, -1},
-    {"Spotify", 0, 0, 1 << 2, 0, -1},
+    {"Spotify", "spotify", 0, 1 << 2, 0, -1},
     /* {"mpv", 0, 0, 1 << 2, 1, -1}, */
-};
 
+};
 
 /* layout(s) */
 static const float mfact = 0.63; /* factor of master area size [0.05..0.95] */
