@@ -57,7 +57,6 @@ static const char *tags[] = {
     "🕳",
 };
 
-
 static const char *alttags[] = {"", "🕸", "🎵"};
 
 static const Rule rules[] = {
@@ -144,6 +143,7 @@ static Key keys[] = {
     {MODKEY, XK_period, focusstack, {.i = +1}},
     {MODKEY, XK_comma, focusstack, {.i = -1}},
 
+
     {MODKEY | ShiftMask, XK_b, togglebar, {0}},
     {MODKEY | ShiftMask, XK_f, togglefullscr, {0}},
     {MODKEY, XK_Tab, view, {0}},
@@ -192,7 +192,8 @@ static Key keys[] = {
 
     {0, XK_KP_Home, spawn, SHCMD("blue -c")},
     {MODKEY, XK_KP_Home, spawn, SHCMD("blue -t")},
-    {0, XK_KP_Left, spawn, SHCMD("timer")},
+    {0, XK_KP_Left, spawn, SHCMD("toggle -d")},
+    {0, XK_KP_Begin, spawn, SHCMD("timer")},
 
     {0, XK_KP_Subtract, spawn, SHCMD("leavex -c")},
     {MODKEY, XK_KP_Subtract, spawn, SHCMD("leavex -s")},
