@@ -70,7 +70,7 @@ static const Rule rules[] = {
     /* class      instance    title       tags mask     isfloating   monitor */
     {"st-256color", 0, 0, 1, 0, -1},
     {"firefox", 0, 0, 1 << 1, 0, -1},
-    {"Spotify", "spotify", 0, 1 << 2, 0, -1},
+    {"Spotify", 0, 0, 1 << 2, 0, -1},
     /* {"Brave-browser", 0, 0, 1 << 1, 0, -1}, */
     /* {"mpv", 0, 0, 1 << 2, 1, -1}, */
 
@@ -116,8 +116,8 @@ static const char *termcmd[] = {"st", NULL};
 #define TAGKEYS(KEY, TAG)                                       \
    {MODKEY, KEY, view, {.ui = 1 << TAG}},                       \
        {MODKEY | ShiftMask, KEY, toggleview, {.ui = 1 << TAG}}, \
-       {MODKEY | ControlMask, KEY, tag, {.ui = 1 << TAG}},      \
-       {MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
+       {MODKEY | Mod1Mask, KEY, tag, {.ui = 1 << TAG}},      \
+       {MODKEY | Mod1Mask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
 
 #include <X11/XF86keysym.h>
 
