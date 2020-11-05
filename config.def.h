@@ -19,9 +19,8 @@ static const int user_bh = 25; /* 0 means that dwm will calculate bar height, >=
                                  1 means dwm will user_bh as bar height */
 /* static const int vertpad = 5;  /1* vertical padding of bar *1/ */
 /* static const int sidepad = 360; /1* horizontal padding of bar *1/ */
-static const int vertpad = 0;  /* vertical padding of bar */
+static const int vertpad = 0; /* vertical padding of bar */
 static const int sidepad = 0; /* horizontal padding of bar */
-
 
 static const char *fonts[] = {
     "sans-serif:size=15:antialias=true:autohint=true",
@@ -94,10 +93,10 @@ static const Layout layouts[] = {
 //==============================================================================
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define SHCMD(cmd)                                         \
-   {                                                       \
-      .v = (const char *[]) { "/bin/sh", "-c", cmd, NULL } \
-   }
+#define SHCMD(cmd)                                                             \
+  {                                                                            \
+    .v = (const char *[]) { "/bin/sh", "-c", cmd, NULL }                       \
+  }
 
 /* commands */
 static char dmenumon[2] =
@@ -113,11 +112,11 @@ static const char *termcmd[] = {"st", NULL};
 
 /* key definitions */
 #define MODKEY Mod4Mask
-#define TAGKEYS(KEY, TAG)                                       \
-   {MODKEY, KEY, view, {.ui = 1 << TAG}},                       \
-       {MODKEY | ShiftMask, KEY, toggleview, {.ui = 1 << TAG}}, \
-       {MODKEY | Mod1Mask, KEY, tag, {.ui = 1 << TAG}},      \
-       {MODKEY | Mod1Mask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
+#define TAGKEYS(KEY, TAG)                                                      \
+  {MODKEY, KEY, view, {.ui = 1 << TAG}},                                       \
+      {MODKEY | ShiftMask, KEY, toggleview, {.ui = 1 << TAG}},                 \
+      {MODKEY | Mod1Mask, KEY, tag, {.ui = 1 << TAG}},                         \
+      {MODKEY | Mod1Mask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
 
 #include <X11/XF86keysym.h>
 
@@ -145,7 +144,6 @@ static Key keys[] = {
 
     {MODKEY, XK_period, focusstack, {.i = +1}},
     {MODKEY, XK_comma, focusstack, {.i = -1}},
-
 
     {MODKEY | ShiftMask, XK_b, togglebar, {0}},
     {MODKEY | ShiftMask, XK_f, togglefullscr, {0}},
