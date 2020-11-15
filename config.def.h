@@ -173,8 +173,7 @@ static Key keys[] = {
     {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")},
     {MODKEY, XK_p, spawn, SHCMD("xdotool key Shift+Insert")},
     {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
-    {MODKEY, XK_s, spawn, SHCMD("toggle --screen_text")},
-    {MODKEY, XK_S, spawn, SHCMD("toggle --screen_key")},
+    {MODKEY, XK_s, spawn, SHCMD("toggle --screen_key")},
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
     {MODKEY, XK_f, spawn, SHCMD("toggle -f")},
@@ -187,8 +186,8 @@ static Key keys[] = {
     {0, XK_F11, spawn, SHCMD("backlight --down")},
     {0, XK_F12, spawn, SHCMD("backlight --up")},
 
-    {0, XK_Print, spawn, SHCMD("record -d")},
-    {MODKEY, XK_Print, spawn, SHCMD("record -s")},
+    {0, XK_Print, spawn, SHCMD("record -s")},
+    {MODKEY, XK_Print, spawn, SHCMD("record -d")},
     /* {0, XK_Print, spawn, SHCMD("maim -u -d 1 ~/screenshot_\"$(date */
     /*    +'%Y-%d%b-%H%M%S')\".png")}, */
     /* {0 | ShiftMask, XK_Print, spawn, SHCMD("maim -B -u -d 1 -s
@@ -196,8 +195,8 @@ static Key keys[] = {
 
     {0, XK_KP_Home, spawn, SHCMD("blue -c")},
     {MODKEY, XK_KP_Home, spawn, SHCMD("blue -t")},
-    {0, XK_KP_Left, spawn, SHCMD("toggle -d")},
-    {0, XK_KP_Begin, spawn, SHCMD("timer")},
+    {0, XK_KP_Left, spawn, SHCMD("toggle --screen_text")},
+    /* {0, XK_KP_Begin, spawn, SHCMD("timer")}, */
 
     {0, XK_KP_Subtract, spawn, SHCMD("leavex -c")},
     {MODKEY, XK_KP_Subtract, spawn, SHCMD("leavex -s")},
