@@ -173,6 +173,8 @@ static Key keys[] = {
     {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")},
     {MODKEY, XK_p, spawn, SHCMD("xdotool key Shift+Insert")},
     {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
+    {MODKEY, XK_s, spawn, SHCMD("toggle --screen_text")},
+    {MODKEY, XK_S, spawn, SHCMD("toggle --screen_key")},
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
     {MODKEY, XK_f, spawn, SHCMD("toggle -f")},
