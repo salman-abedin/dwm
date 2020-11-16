@@ -170,15 +170,14 @@ static Key keys[] = {
 
     {MODKEY, XK_b, spawn, SHCMD("$BROWSER")},
     {MODKEY, XK_e, spawn, SHCMD("insertemoji")},
+    {MODKEY, XK_f, spawn, SHCMD("toggle -f")},
     {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")},
     {MODKEY, XK_p, spawn, SHCMD("xdotool key Shift+Insert")},
     {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
     {MODKEY, XK_s, spawn, SHCMD("toggle --screen_key")},
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
+    {MODKEY, XK_u, spawn, SHCMD("unimark")},
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
-    {MODKEY, XK_f, spawn, SHCMD("toggle -f")},
-
-    {MODKEY, XK_backslash, spawn, SHCMD("unimark")},
 
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
     {0, XK_F2, spawn, SHCMD("setplayer --vol down")},
