@@ -94,10 +94,10 @@ static const Layout layouts[] = {
 //==============================================================================
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define SHCMD(cmd)                                                             \
-  {                                                                            \
-    .v = (const char *[]) { "/bin/sh", "-c", cmd, NULL }                       \
-  }
+#define SHCMD(cmd)                                         \
+   {                                                       \
+      .v = (const char *[]) { "/bin/sh", "-c", cmd, NULL } \
+   }
 
 /* commands */
 static char dmenumon[2] =
@@ -113,11 +113,11 @@ static const char *termcmd[] = {"st", NULL};
 
 /* key definitions */
 #define MODKEY Mod4Mask
-#define TAGKEYS(KEY, TAG)                                                      \
-  {MODKEY, KEY, view, {.ui = 1 << TAG}},                                       \
-      {MODKEY | ShiftMask, KEY, toggleview, {.ui = 1 << TAG}},                 \
-      {MODKEY | Mod1Mask, KEY, tag, {.ui = 1 << TAG}},                         \
-      {MODKEY | Mod1Mask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
+#define TAGKEYS(KEY, TAG)                                       \
+   {MODKEY, KEY, view, {.ui = 1 << TAG}},                       \
+       {MODKEY | ShiftMask, KEY, toggleview, {.ui = 1 << TAG}}, \
+       {MODKEY | Mod1Mask, KEY, tag, {.ui = 1 << TAG}},         \
+       {MODKEY | Mod1Mask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
 
 #include <X11/XF86keysym.h>
 
