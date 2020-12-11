@@ -134,14 +134,13 @@ static Key keys[] = {
     /* {MODKEY, XK_semicolon, view_adjacent, {.i = +1}}, */
     /* {MODKEY, XK_j, view_adjacent, {.i = -1}}, */
 
-    {MODKEY, XK_semicolon, shiftviewactive, {.i = +1}},
+    {MODKEY, XK_h, inplacerotate, {.i = -2}},
+    {MODKEY, XK_k, shiftviewactive, {.i = +1}},
     {MODKEY, XK_j, shiftviewactive, {.i = -1}},
+    {MODKEY, XK_l, inplacerotate, {.i = +2}},
 
     {MODKEY, XK_n, killclient, {0}},
     {MODKEY, XK_m, setlayout, {0}},
-
-    {MODKEY, XK_l, inplacerotate, {.i = +2}},
-    {MODKEY, XK_k, inplacerotate, {.i = -2}},
 
     {MODKEY, XK_period, focusstack, {.i = +1}},
     {MODKEY, XK_comma, focusstack, {.i = -1}},
@@ -152,8 +151,8 @@ static Key keys[] = {
     {MODKEY, XK_q, quit, {0}},
 
     /* Resize */
-    {MODKEY | Mod1Mask, XK_j, setmfact, {.f = -0.05}},
-    {MODKEY | Mod1Mask, XK_semicolon, setmfact, {.f = +0.05}},
+    {MODKEY | Mod1Mask, XK_h, setmfact, {.f = -0.05}},
+    {MODKEY | Mod1Mask, XK_l, setmfact, {.f = +0.05}},
 
     /* {MODKEY, XK_Return, zoom, {0}}, */
     /* {MODKEY, XK_m, setlayout, {.v = &layouts[2]}}, */
