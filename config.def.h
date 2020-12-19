@@ -132,15 +132,12 @@ static Key keys[] = {
     //              WM stuff
     //--------------------------------------
 
-    /* {MODKEY, XK_semicolon, view_adjacent, {.i = +1}}, */
-    /* {MODKEY, XK_j, view_adjacent, {.i = -1}}, */
-
     {MODKEY, XK_h, inplacerotate, {.i = -2}},
     {MODKEY, XK_k, shiftviewactive, {.i = +1}},
     {MODKEY, XK_j, shiftviewactive, {.i = -1}},
     {MODKEY, XK_l, inplacerotate, {.i = +2}},
 
-    {MODKEY, XK_n, killclient, {0}},
+    {MODKEY, XK_semicolon, killclient, {0}},
     {MODKEY, XK_m, setlayout, {0}},
 
     {MODKEY, XK_period, focusstack, {.i = +1}},
