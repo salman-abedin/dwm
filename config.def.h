@@ -73,6 +73,7 @@ static const Rule rules[] = {
     {"calibre", 0, 0, 1 << 2, 0, -1},
     {"presenter", 0, 0, 1 << 2, 0, -1},
     {"mpv", 0, 0, 1 << 2, 1, -1},
+    {"MuseScore3", 0, 0, 1 << 2, 1, -1},
     /* {"st-256color", 0, 0, 1, 0, -1}, */
 
 };
