@@ -177,7 +177,10 @@ static Key keys[] = {
     {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
     {MODKEY, XK_s, spawn, SHCMD("toggle --screen_key")},
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
-    {MODKEY, XK_u, spawn, SHCMD("unimark")},
+    /* {MODKEY, XK_u, spawn, SHCMD("unimark")}, */
+    /* {MODKEY | ShiftMask, XK_u, spawn, SHCMD("unipass")}, */
+    {MODKEY, XK_u, spawn, SHCMD("unipass add")},
+    {MODKEY | ShiftMask, XK_u, spawn, SHCMD("unipass fetch")},
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
 
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
