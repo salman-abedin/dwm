@@ -172,7 +172,8 @@ static Key keys[] = {
     /* {MODKEY, XK_h, spawn, SHCMD("xrandr -o left")}, */
     /* {MODKEY | ShiftMask, XK_h, spawn, */
     /*  SHCMD("xrandr -o normal && xrandr -s 1366x768")}, */
-    {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")},
+    {MODKEY, XK_o, spawn, SHCMD("launch --bolt")},
+    /* {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")}, */
     /* {MODKEY, XK_p, spawn, SHCMD("xdotool keyup p key --clearmodifiers Control+Shift+v")}, */
     {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
     {MODKEY, XK_s, spawn, SHCMD("toggle --screen_key")},
