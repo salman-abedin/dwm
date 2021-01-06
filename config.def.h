@@ -70,6 +70,7 @@ static const Rule rules[] = {
     {"Brave-browser", 0, 0, 1 << 1, 0, -1},
     {"firefox", 0, 0, 1 << 1, 0, -1},
     {"Spotify", 0, 0, 1 << 2, 0, -1},
+    {"Microsoft Teams - Preview", 0, 0, 1 << 2, 0, -1},
     {"calibre", 0, 0, 1 << 2, 0, -1},
     {"presenter", 0, 0, 1 << 2, 0, -1},
     {"mpv", 0, 0, 1 << 2, 1, -1},
