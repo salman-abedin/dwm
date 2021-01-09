@@ -211,7 +211,8 @@ static Key keys[] = {
     {0, XK_KP_Delete, spawn, SHCMD("lock -f")},
 
     /* {0, XK_KP_Delete, spawn, SHCMD("pkill -u $USER")}, */
-    {0, XK_KP_Insert, spawn, SHCMD("sleep 1 && xset dpms force off")},
+    /* {0, XK_KP_Insert, spawn, SHCMD("sleep 1 && xset dpms force off")}, */
+    {0, XK_KP_Insert, spawn, SHCMD("lock")},
     /* {0, XK_KP_Add, spawn, SHCMD("systectl suspend")}, */
 
     /* {MODKEY, XK_k, spawn, */
