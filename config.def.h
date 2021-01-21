@@ -201,7 +201,8 @@ static Key keys[] = {
 
     {0, XK_KP_Home, spawn, SHCMD("blue -c")},
     {MODKEY, XK_KP_Home, spawn, SHCMD("blue -t")},
-    {0, XK_KP_Left, spawn, SHCMD("toggle --screen_text")},
+    {0, XK_KP_Left, spawn, SHCMD("toggle --cam")},
+    /* {0, XK_KP_Left, spawn, SHCMD("toggle --screen_text")}, */
     /* {0, XK_KP_Begin, spawn, SHCMD("timer")}, */
 
     {0, XK_KP_Subtract, spawn, SHCMD("leavex -c")},
