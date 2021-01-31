@@ -68,7 +68,7 @@ static const Rule rules[] = {
      */
     /* class      instance    title       tags mask     isfloating   monitor */
     {"Brave-browser", 0, 0, 1 << 1, 0, -1},
-    {"qutebrowser", 0, 0, 1 << 1, 0, -1},
+    /* {"qutebrowser", 0, 0, 1 << 1, 0, -1}, */
     {"firefox", 0, 0, 1 << 1, 0, -1},
     {"Spotify", 0, 0, 1 << 2, 0, -1},
     {"Microsoft Teams - Preview", 0, 0, 1 << 2, 0, -1},
