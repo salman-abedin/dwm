@@ -192,6 +192,8 @@ static Key keys[] = {
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
     {0, XK_F2, spawn, SHCMD("setplayer --vol down")},
     {0, XK_F3, spawn, SHCMD("setplayer --vol up")},
+    {0, XK_F4, spawn, SHCMD("blue -t")},
+    {0, XK_F5, spawn, SHCMD("blue -c")},
     {0, XK_F11, spawn, SHCMD("backlight --down")},
     {0, XK_F12, spawn, SHCMD("backlight --up")},
 
@@ -202,8 +204,6 @@ static Key keys[] = {
     /* {0 | ShiftMask, XK_Print, spawn, SHCMD("maim -B -u -d 1 -s
        ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png")}, */
 
-    {0, XK_KP_Home, spawn, SHCMD("blue -c")},
-    {MODKEY, XK_KP_Home, spawn, SHCMD("blue -t")},
     {0, XK_KP_Left, spawn, SHCMD("toggle --cam")},
     /* {0, XK_KP_Left, spawn, SHCMD("toggle --screen_text")}, */
     /* {0, XK_KP_Begin, spawn, SHCMD("timer")}, */
