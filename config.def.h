@@ -182,7 +182,7 @@ static Key keys[] = {
     /* {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")}, */
     /* {MODKEY, XK_p, spawn, SHCMD("xdotool keyup p key --clearmodifiers Control+Shift+v")}, */
     /* {MODKEY, XK_a, spawn, SHCMD("xdotool key Caps_Lock")}, */
-    {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
+    {MODKEY, XK_r, spawn, SHCMD("$DMENU -r")},
     {MODKEY, XK_s, spawn, SHCMD("toggle --screen_key")},
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
     {MODKEY, XK_u, spawn, SHCMD("unimark")},
