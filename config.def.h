@@ -40,9 +40,9 @@ static const char col_gray3[] = "#bbbbbb";
 static const char col_gray4[] = "#eeeeee";
 static const char col_cyan[] = "#005577";
 
-static const char norm_bg[]="#000000";
-static const char norm_border[]="#ffffff";
-static const char norm_fg[]="#ffffff";
+static const char norm_bg[]="#cccccc";
+static const char norm_border[]="#000000";
+static const char norm_fg[]="#000000";
 
 static const char sel_fg[] = "#ffffff";
 static const char sel_bg[] = "#222222";
@@ -190,6 +190,7 @@ static Key keys[] = {
     {MODKEY, XK_i, spawn, SHCMD("unipass add")},
     {MODKEY | ShiftMask, XK_i, spawn, SHCMD("unipass fetch")},
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
+    {MODKEY, XK_apostrophe, spawn, SHCMD("scratchpad")},
 
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
     {0, XK_F2, spawn, SHCMD("setplayer --vol down")},
