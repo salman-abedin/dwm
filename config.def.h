@@ -40,12 +40,15 @@ static const char col_gray3[] = "#bbbbbb";
 static const char col_gray4[] = "#eeeeee";
 static const char col_cyan[] = "#005577";
 
-static const unsigned int baralpha = 0xd0;
-static const unsigned int borderalpha = OPAQUE;
+/* static const unsigned int baralpha = 0xd0; */
+/* static const unsigned int borderalpha = OPAQUE; */
 
-static const char norm_bg[]="#000000";
-static const char norm_border[]="#ffffff";
-static const char norm_fg[]="#ffffff";
+static const unsigned int baralpha = 220;
+static const unsigned int borderalpha = 0;
+
+static const char norm_bg[]="#cccccc";
+static const char norm_border[]="#000000";
+static const char norm_fg[]="#000000";
 
 static const char sel_fg[] = "#ffffff";
 static const char sel_bg[] = "#222222";
