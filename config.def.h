@@ -90,6 +90,7 @@ static const Rule rules[] = {
     /* {"mpv", 0, 0, 1 << 2, 1, -1}, */
     {"MuseScore3", 0, 0, 1 << 2, 1, -1},
     {"st-256color", 0, 0, 1, 0, -1},
+    {"amenu", 0, 0, 0, 1, -1},
     {"scratchpad", 0, 0, 0, 1, -1},
 };
 
@@ -194,7 +195,7 @@ static Key keys[] = {
     /* {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")}, */
     /* {MODKEY, XK_p, spawn, SHCMD("xdotool keyup p key --clearmodifiers Control+Shift+v")}, */
     /* {MODKEY, XK_a, spawn, SHCMD("xdotool key Caps_Lock")}, */
-    {MODKEY, XK_r, spawn, SHCMD("$DMENU -r")},
+    {MODKEY, XK_r, spawn, SHCMD("$DMENU -l")},
     {MODKEY, XK_s, spawn, SHCMD("toggle --screen_key")},
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
     {MODKEY, XK_u, spawn, SHCMD("unimark")},
