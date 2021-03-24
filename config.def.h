@@ -161,6 +161,7 @@ static Key keys[] = {
     {MODKEY, XK_semicolon, killclient, {0}},
 
     {MODKEY, XK_z, setlayout, {0}},
+    // {MODKEY, XK_m, setlayout, {0}},
 
     /* {MODKEY | ShiftMask, XK_b, togglebar, {0}}, */
     {MODKEY, XK_p, togglebar, {0}},
@@ -173,7 +174,7 @@ static Key keys[] = {
     {MODKEY | Mod1Mask, XK_l, setmfact, {.f = +0.05}},
 
     /* {MODKEY, XK_Return, zoom, {0}}, */
-    /* {MODKEY, XK_m, setlayout, {.v = &layouts[2]}}, */
+    // {MODKEY, XK_m, setlayout, {.v = &layouts[2]}},
     /* {MODKEY | ShiftMask, XK_space, togglefloating, {0}}, */
 
     /* /1* Bring to master *1/ */
