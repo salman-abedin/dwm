@@ -215,8 +215,8 @@ static Key keys[] = {
     /* {0, XK_F11, spawn, SHCMD("backlight --down")}, */
     /* {0, XK_F12, spawn, SHCMD("backlight --up")}, */
 
-    {0, XK_Print, spawn, SHCMD("record -s")},
-    {MODKEY, XK_Print, spawn, SHCMD("record -d")},
+    {0, XK_Print, spawn, SHCMD("record -d")},
+    {MODKEY, XK_Print, spawn, SHCMD("record -s")},
     /* {0, XK_Print, spawn, SHCMD("maim -u -d 1 ~/screenshot_\"$(date */
     /*    +'%Y-%d%b-%H%M%S')\".png")}, */
     /* {0 | ShiftMask, XK_Print, spawn, SHCMD("maim -B -u -d 1 -s
