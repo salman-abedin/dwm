@@ -212,6 +212,7 @@ static Key keys[] = {
     {0, XK_F3, spawn, SHCMD("setplayer --vol up")},
     {0, XK_F4, spawn, SHCMD("blue -t")},
     {0, XK_F5, spawn, SHCMD("blue -c")},
+    // {0, XK_F6, spawn, SHCMD("xdotool mousemove 700 40 click 1")},
     /* {0, XK_F11, spawn, SHCMD("backlight --down")}, */
     /* {0, XK_F12, spawn, SHCMD("backlight --up")}, */
 
