@@ -186,13 +186,15 @@ static Key keys[] = {
 
     {MODKEY, XK_Return, spawn, SHCMD("launch -T")},
 
+    {MODKEY, XK_m, spawn, SHCMD("ns yo")},
+
     {MODKEY, XK_b, spawn, SHCMD("$BROWSER")},
     {MODKEY, XK_e, spawn, SHCMD("insertemoji")},
     {MODKEY, XK_f, spawn, SHCMD("toggle -f")},
     /* {MODKEY, XK_h, spawn, SHCMD("xrandr -o left")}, */
     /* {MODKEY | ShiftMask, XK_h, spawn, */
     /*  SHCMD("xrandr -o normal && xrandr -s 1366x768")}, */
-    {MODKEY, XK_m, spawn, SHCMD("toggle -m")},
+    // {MODKEY, XK_m, spawn, SHCMD("toggle -m")},
     {MODKEY, XK_o, spawn, SHCMD("launch --bolt")},
     /* {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")}, */
     /* {MODKEY, XK_p, spawn, SHCMD("xdotool keyup p key --clearmodifiers Control+Shift+v")}, */
