@@ -160,8 +160,8 @@ static Key keys[] = {
 
     {MODKEY, XK_semicolon, killclient, {0}},
 
-    {MODKEY, XK_z, setlayout, {0}},
-    // {MODKEY, XK_m, setlayout, {0}},
+    // {MODKEY, XK_z, setlayout, {0}},
+    {MODKEY, XK_m, setlayout, {0}},
 
     /* {MODKEY | ShiftMask, XK_b, togglebar, {0}}, */
     {MODKEY, XK_p, togglebar, {0}},
@@ -186,7 +186,7 @@ static Key keys[] = {
 
     {MODKEY, XK_Return, spawn, SHCMD("launch -T")},
 
-    {MODKEY, XK_m, spawn, SHCMD("ns yo")},
+    // {MODKEY, XK_m, spawn, SHCMD("ns yo")},
 
     {MODKEY, XK_b, spawn, SHCMD("$BROWSER")},
     {MODKEY, XK_e, spawn, SHCMD("insertemoji")},
