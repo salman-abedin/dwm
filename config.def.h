@@ -230,7 +230,7 @@ static Key keys[] = {
     /* {0, XK_KP_Begin, spawn, SHCMD("timer")}, */
 
     {0, XK_KP_Subtract, spawn, SHCMD("leavex -c")},
-    {MODKEY, XK_KP_Subtract, spawn, SHCMD("leavex -s")},
+    // {MODKEY, XK_KP_Subtract, spawn, SHCMD("leavex -s")},
     {0, XK_KP_End, spawn, SHCMD("pkill -u $USER")},
 
     {0, XK_KP_Delete, spawn, SHCMD("lock -f")},
