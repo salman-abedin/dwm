@@ -89,6 +89,7 @@ static const Rule rules[] = {
     {"presenter", 0, 0, 1 << 2, 0, -1},
     /* {"mpv", 0, 0, 1 << 2, 1, -1}, */
     {"MuseScore3", 0, 0, 1 << 2, 0, -1},
+    {"Alacritty", 0, 0, 1 << 2, 0, -1},
     {"st-256color", 0, 0, 1, 0, -1},
     {"amenu", 0, 0, 0, 1, -1},
     {"scratchpad", 0, 0, 0, 1, -1},
@@ -199,7 +200,8 @@ static Key keys[] = {
     /* {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")}, */
     /* {MODKEY, XK_p, spawn, SHCMD("xdotool keyup p key --clearmodifiers Control+Shift+v")}, */
     /* {MODKEY, XK_a, spawn, SHCMD("xdotool key Caps_Lock")}, */
-    {MODKEY, XK_r, spawn, SHCMD("$DMENU -l")},
+    {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
+    // {MODKEY, XK_r, spawn, SHCMD("$DMENU -l")},
     {MODKEY, XK_s, spawn, SHCMD("toggle --screen_key")},
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
     {MODKEY, XK_u, spawn, SHCMD("unimark")},
@@ -208,6 +210,7 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_i, spawn, SHCMD("unipass fetch")},
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
     {MODKEY, XK_apostrophe, spawn, SHCMD("scratchpad")},
+
 
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
     {0, XK_F2, spawn, SHCMD("setplayer --vol down")},
@@ -225,15 +228,20 @@ static Key keys[] = {
     /* {0 | ShiftMask, XK_Print, spawn, SHCMD("maim -B -u -d 1 -s
        ~/screenshot_"$(date +'%Y-%d%b-%H%M%S')".png")}, */
 
-    {0, XK_KP_Left, spawn, SHCMD("toggle --cam")},
+    // {0, XK_KP_Left, spawn, SHCMD("toggle --cam")},
     /* {0, XK_KP_Left, spawn, SHCMD("toggle --screen_text")}, */
     /* {0, XK_KP_Begin, spawn, SHCMD("timer")}, */
+    // {0, XK_KP_Begin, spawn, SHCMD("xmodmap $LAYOUT_AR")},
+    // {0, XK_KP_Begin, spawn, SHCMD("xmodmap $LAYOUT_AR")},
+
+    {0, XK_KP_Left, spawn, SHCMD("xmodmap $LAYOUT_EN")},
+    {0, XK_KP_Right, spawn, SHCMD("xmodmap $LAYOUT_AR")},
 
     {0, XK_KP_Subtract, spawn, SHCMD("leavex -c")},
     // {MODKEY, XK_KP_Subtract, spawn, SHCMD("leavex -s")},
-    {0, XK_KP_End, spawn, SHCMD("pkill -u $USER")},
+    // {0, XK_KP_End, spawn, SHCMD("pkill -u $USER")},
 
-    {0, XK_KP_Delete, spawn, SHCMD("lock -f")},
+    // {0, XK_KP_Delete, spawn, SHCMD("lock -f")},
 
     /* {0, XK_KP_Delete, spawn, SHCMD("pkill -u $USER")}, */
     /* {0, XK_KP_Insert, spawn, SHCMD("sleep 1 && xset dpms force off")}, */
