@@ -46,9 +46,9 @@ static const char col_cyan[] = "#005577";
 static const unsigned int baralpha = 220;
 static const unsigned int borderalpha = 0;
 
-static const char norm_bg[]="#000000";
-static const char norm_border[]="#ffffff";
-static const char norm_fg[]="#ffffff";
+static const char norm_bg[] = "#000000";
+static const char norm_border[] = "#ffffff";
+static const char norm_fg[] = "#ffffff";
 
 static const char sel_fg[] = "#ffffff";
 static const char sel_bg[] = "#222222";
@@ -60,10 +60,10 @@ static const char *colors[][3] = {
     [SchemeSel] = {sel_fg, sel_bg, sel_border},
 };
 
-static const unsigned int alphas[][3]      = {
-   /*               fg      bg        border     */
-   [SchemeNorm] = { OPAQUE, baralpha, borderalpha },
-   [SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+static const unsigned int alphas[][3] = {
+    /*               fg      bg        border     */
+    [SchemeNorm] = {OPAQUE, baralpha, borderalpha},
+    [SchemeSel] = {OPAQUE, baralpha, borderalpha},
 };
 
 static const char *tags[] = {
@@ -113,10 +113,10 @@ static const Layout layouts[] = {
 //==============================================================================
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define SHCMD(cmd)                                         \
-   {                                                       \
-      .v = (const char *[]) { "/bin/sh", "-c", cmd, NULL } \
-   }
+#define SHCMD(cmd)                                                             \
+  {                                                                            \
+    .v = (const char *[]) { "/bin/sh", "-c", cmd, NULL }                       \
+  }
 
 /* commands */
 static char dmenumon[2] =
@@ -132,11 +132,11 @@ static const char *termcmd[] = {"st", NULL};
 
 /* key definitions */
 #define MODKEY Mod4Mask
-#define TAGKEYS(KEY, TAG)                                       \
-   {MODKEY, KEY, view, {.ui = 1 << TAG}},                       \
-       {MODKEY | ShiftMask, KEY, toggleview, {.ui = 1 << TAG}}, \
-       {MODKEY | Mod1Mask, KEY, tag, {.ui = 1 << TAG}},         \
-       {MODKEY | Mod1Mask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
+#define TAGKEYS(KEY, TAG)                                                      \
+  {MODKEY, KEY, view, {.ui = 1 << TAG}},                                       \
+      {MODKEY | ShiftMask, KEY, toggleview, {.ui = 1 << TAG}},                 \
+      {MODKEY | Mod1Mask, KEY, tag, {.ui = 1 << TAG}},                         \
+      {MODKEY | Mod1Mask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
 
 #include <X11/XF86keysym.h>
 
@@ -196,9 +196,10 @@ static Key keys[] = {
     /* {MODKEY | ShiftMask, XK_h, spawn, */
     /*  SHCMD("xrandr -o normal && xrandr -s 1366x768")}, */
     // {MODKEY, XK_m, spawn, SHCMD("toggle -m")},
-    {MODKEY, XK_o, spawn, SHCMD("launch --bolt")},
+    {MODKEY, XK_o, spawn, SHCMD("launch --faint")},
     /* {MODKEY, XK_o, spawn, SHCMD("bolt --tmux-search")}, */
-    /* {MODKEY, XK_p, spawn, SHCMD("xdotool keyup p key --clearmodifiers Control+Shift+v")}, */
+    /* {MODKEY, XK_p, spawn, SHCMD("xdotool keyup p key --clearmodifiers
+       Control+Shift+v")}, */
     /* {MODKEY, XK_a, spawn, SHCMD("xdotool key Caps_Lock")}, */
     {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
     // {MODKEY, XK_r, spawn, SHCMD("$DMENU -l")},
@@ -210,7 +211,6 @@ static Key keys[] = {
     {MODKEY | ShiftMask, XK_i, spawn, SHCMD("unipass fetch")},
     {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
     {MODKEY, XK_apostrophe, spawn, SHCMD("scratchpad")},
-
 
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
     {0, XK_F2, spawn, SHCMD("setplayer --vol down")},
