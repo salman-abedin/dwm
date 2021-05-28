@@ -23,12 +23,13 @@ static const int vertpad = 0; /* vertical padding of bar */
 static const int sidepad = 0; /* horizontal padding of bar */
 
 static const char *fonts[] = {
-    /* "sans-serif:size=15:antialias=true:autohint=true", */
-    "sans-serif:style=bold:size=15:antialias=true:autohint=true",
-    "Noto Color Emoji:pixelsize=12:antialias=true:autohint=true",
+    /* "sans-serif:style=bold:size=15:antialias=true:autohint=true", */
+    "sans-serif:style=bold:size=9:antialias=true:autohint=true",
+    // "sans-serif:style=bold:size=10:antialias=true:autohint=true",
+    "Noto Color Emoji:pixelsize=14:antialias=true:autohint=true",
 };
 
-static const char dmenufont[] = "sans-serif:size=15";
+static const char dmenufont[] = "sans-serif:style=bold:size=15";
 
 //==============================================================================
 //                             Colors
@@ -46,9 +47,9 @@ static const char col_cyan[] = "#005577";
 static const unsigned int baralpha = 220;
 static const unsigned int borderalpha = 0;
 
-static const char norm_bg[] = "#000000";
-static const char norm_border[] = "#ffffff";
-static const char norm_fg[] = "#ffffff";
+static const char norm_bg[]="#cccccc";
+static const char norm_border[]="#000000";
+static const char norm_fg[]="#000000";
 
 static const char sel_fg[] = "#ffffff";
 static const char sel_bg[] = "#222222";
@@ -81,6 +82,7 @@ static const Rule rules[] = {
      */
     /* class      instance    title       tags mask     isfloating   monitor */
     {"Brave-browser", 0, 0, 1 << 1, 0, -1},
+    // {"feh", 0, 0, 1 << 1, 0, -1},
     // {"qutebrowser", 0, 0, 1 << 1, 0, -1},
     {"firefox", 0, 0, 1 << 1, 0, -1},
     {"Spotify", 0, 0, 1 << 2, 0, -1},
@@ -104,8 +106,8 @@ static const int resizehints =
 static const Layout layouts[] = {
     /* symbol     arrange function */
     {"🎸", monocle}, /* first entry is default */
+    {"🏊", NULL}, /* no layout function means floating behavior */
     {"", tile},
-    {"><>", NULL}, /* no layout function means floating behavior */
 };
 
 //==============================================================================
@@ -201,15 +203,16 @@ static Key keys[] = {
     /* {MODKEY, XK_p, spawn, SHCMD("xdotool keyup p key --clearmodifiers
        Control+Shift+v")}, */
     /* {MODKEY, XK_a, spawn, SHCMD("xdotool key Caps_Lock")}, */
-    {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
-    // {MODKEY, XK_r, spawn, SHCMD("$DMENU -l")},
+    // {MODKEY, XK_r, spawn, SHCMD("dmenu_run")},
+    {MODKEY, XK_r, spawn, SHCMD("amenu -l")},
     {MODKEY, XK_s, spawn, SHCMD("toggle --screen_key")},
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
     {MODKEY, XK_u, spawn, SHCMD("unimark")},
     /* {MODKEY | ShiftMask, XK_u, spawn, SHCMD("unipass")}, */
     {MODKEY, XK_i, spawn, SHCMD("unipass add")},
     {MODKEY | ShiftMask, XK_i, spawn, SHCMD("unipass fetch")},
-    {MODKEY, XK_w, spawn, SHCMD("setdisplay --bg shuffle")},
+    {MODKEY, XK_w, spawn, SHCMD("set-bg -s")},
+    {MODKEY | ShiftMask, XK_w, spawn, SHCMD("set-bg -d")},
     {MODKEY, XK_apostrophe, spawn, SHCMD("scratchpad")},
 
     {0, XK_F1, spawn, SHCMD("setplayer --vol toggle")},
@@ -217,8 +220,9 @@ static Key keys[] = {
     {0, XK_F3, spawn, SHCMD("setplayer --vol up")},
     // {0, XK_F4, spawn, SHCMD("blue -t")},
     // {0, XK_F5, spawn, SHCMD("blue -c")},
-    {0, XK_F6, spawn, SHCMD("backlight --down")},
+    // {0, XK_F6, spawn, SHCMD("backlight --down")},
     {0, XK_F7, spawn, SHCMD("backlight --up")},
+    {0, XK_F10, spawn, SHCMD("record -d")},
     // {0, XK_F6, spawn, SHCMD("xdotool mousemove 700 40 click 1")},
     {0, XK_F12, spawn, SHCMD("leavex -c")},
 
