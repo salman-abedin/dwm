@@ -23,10 +23,11 @@ static const int vertpad = 0; /* vertical padding of bar */
 static const int sidepad = 0; /* horizontal padding of bar */
 
 static const char *fonts[] = {
-    /* "sans-serif:style=bold:size=15:antialias=true:autohint=true", */
-    "sans-serif:style=bold:size=9:antialias=true:autohint=true",
     // "sans-serif:style=bold:size=10:antialias=true:autohint=true",
-    "Noto Color Emoji:pixelsize=14:antialias=true:autohint=true",
+    // "Changa One:size=10:antialias=true:autohint=true",
+    // "Unica One:size=11:antialias=true:autohint=true",
+    "Share:style=bold:size=10:antialias=true:autohint=true",
+    "Noto Color Emoji:pixelsize=17:antialias=true:autohint=true",
 };
 
 static const char dmenufont[] = "sans-serif:style=bold:size=15";
@@ -47,9 +48,9 @@ static const char col_cyan[] = "#005577";
 static const unsigned int baralpha = 220;
 static const unsigned int borderalpha = 0;
 
-static const char norm_bg[]="#cccccc";
-static const char norm_border[]="#000000";
-static const char norm_fg[]="#000000";
+static const char norm_bg[]="#000000";
+static const char norm_border[]="#ffffff";
+static const char norm_fg[]="#ffffff";
 
 static const char sel_fg[] = "#ffffff";
 static const char sel_bg[] = "#222222";
@@ -106,8 +107,8 @@ static const int resizehints =
 static const Layout layouts[] = {
     /* symbol     arrange function */
     {"🎸", monocle}, /* first entry is default */
-    {"🏊", NULL}, /* no layout function means floating behavior */
     {"", tile},
+    {"🏊", NULL}, /* no layout function means floating behavior */
 };
 
 //==============================================================================
