@@ -87,7 +87,9 @@ static const Rule rules[] = {
     // {"qutebrowser", 0, 0, 1 << 1, 0, -1},
     {"firefox", 0, 0, 1 << 1, 0, -1},
     {"Spotify", 0, 0, 1 << 2, 0, -1},
+    {"Zathura", 0, 0, 1 << 2, 0, -1},
     {"Microsoft Teams - Preview", 0, 0, 1 << 2, 0, -1},
+    {"zoom", 0, 0, 1 << 2, 0, -1},
     {"calibre", 0, 0, 1 << 2, 0, -1},
     {"presenter", 0, 0, 1 << 2, 0, -1},
     /* {"mpv", 0, 0, 1 << 2, 1, -1}, */
@@ -210,8 +212,8 @@ static Key keys[] = {
     {MODKEY, XK_t, spawn, SHCMD("alacritty")},
     {MODKEY, XK_u, spawn, SHCMD("unimark")},
     /* {MODKEY | ShiftMask, XK_u, spawn, SHCMD("unipass")}, */
-    {MODKEY, XK_i, spawn, SHCMD("unipass add")},
-    {MODKEY | ShiftMask, XK_i, spawn, SHCMD("unipass fetch")},
+    {MODKEY | ShiftMask, XK_i, spawn, SHCMD("unipass add")},
+    {MODKEY, XK_i, spawn, SHCMD("unipass fetch")},
     {MODKEY, XK_w, spawn, SHCMD("set-bg -s")},
     {MODKEY | ShiftMask, XK_w, spawn, SHCMD("set-bg -d")},
     {MODKEY, XK_apostrophe, spawn, SHCMD("scratchpad")},
